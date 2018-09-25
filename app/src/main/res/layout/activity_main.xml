@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.tuckermelton.tetrisapp.MainActivity"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:custom="http://schemas.android.com/apk/res-auto">
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/displayGrid"
+            android:layout_marginLeft="16dp"
+            android:text="RESET"
+            android:textSize="25dp"
+            android:layout_toRightOf="@+id/displayGrid"/>
+
+        <com.example.tuckermelton.tetrisapp.DisplayGrid
+            android:id="@+id/displayGrid"
+            android:layout_width="260dp"
+            android:layout_height="520dp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="16dp"
+            custom:preview="false">
+
+        </com.example.tuckermelton.tetrisapp.DisplayGrid>
+
+
+        <com.example.tuckermelton.tetrisapp.DisplayGrid
+            android:id="@+id/displayGridPreview"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="16dp"
+            android:layout_toRightOf="@+id/displayGrid"
+            custom:preview="true">
+
+        </com.example.tuckermelton.tetrisapp.DisplayGrid>
+
+        <TextView
+            android:id="@+id/levelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="Level: "
+            android:textSize="30dp"
+            android:layout_toRightOf="@+id/displayGrid"
+            android:layout_below="@+id/displayGridPreview"/>
+
+        <TextView
+            android:id="@+id/level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="30dp"
+            android:text="0"
+            android:textSize="30dp"
+            android:layout_toRightOf="@+id/displayGrid"
+            android:layout_below="@+id/levelTextView"/>
+
+
+        <TextView
+            android:id="@+id/rowsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="Rows: "
+            android:textSize="30dp"
+            android:layout_toRightOf="@+id/displayGrid"
+            android:layout_below="@+id/level"/>
+
+        <TextView
+            android:id="@+id/rows"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="30dp"
+            android:text="0"
+            android:textSize="30dp"
+            android:layout_toRightOf="@+id/displayGrid"
+            android:layout_below="@+id/rowsTextView"/>
+
+        <TextView
+            android:id="@+id/scoreTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="Score: "
+            android:textSize="30dp"
+            android:layout_toRightOf="@+id/displayGrid"
+            android:layout_below="@+id/rows"/>
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="30dp"
+            android:text="0"
+            android:textSize="30dp"
+            android:layout_toRightOf="@+id/displayGrid"
+            android:layout_below="@+id/scoreTextView"/>
+
+
+
+        <ImageButton
+            android:id="@+id/left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/displayGrid"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/left" />
+
+        <ImageButton
+            android:id="@+id/rotateLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/displayGrid"
+            android:layout_toRightOf="@+id/left"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/rotateleft"/>
+
+        <ImageButton
+            android:id="@+id/down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/displayGrid"
+            android:layout_toRightOf="@id/rotateLeft"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/down"/>
+
+        <ImageButton
+            android:id="@+id/rotateRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/displayGrid"
+            android:layout_toRightOf="@id/down"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/rotateright"/>
+
+        <ImageButton
+            android:id="@+id/right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/displayGrid"
+            android:layout_toRightOf="@+id/rotateRight"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/right"/>
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,5 @@
+<resources>
+    <declare-styleable name="DisplayGrid">
+        <attr name="preview" format="boolean" />
+    </declare-styleable>
+</resources>
